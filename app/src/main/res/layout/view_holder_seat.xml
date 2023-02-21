@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llShowTimeVH"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:text="A"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSeat1"
+            style="@style/styleCinemaSeatImageView"
+            android:layout_width="@dimen/width_seat"
+            android:layout_height="@dimen/height_seat"
+            app:srcCompat="@drawable/ic_chair" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSeat2"
+            style="@style/styleCinemaSeatImageView"
+            android:layout_width="@dimen/width_seat"
+            android:layout_height="@dimen/height_seat"
+            app:srcCompat="@drawable/ic_chair" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSeat3"
+            style="@style/styleCinemaSeatImageView"
+            android:layout_width="@dimen/width_seat"
+            android:layout_height="@dimen/height_seat"
+            app:srcCompat="@drawable/ic_chair" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSeat4"
+            style="@style/styleCinemaSeatImageView"
+            android:layout_width="@dimen/width_seat"
+            android:layout_height="@dimen/height_seat"
+            app:srcCompat="@drawable/ic_chair" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSeat5"
+            style="@style/styleCinemaSeatImageView"
+            android:layout_width="@dimen/width_seat"
+            android:layout_height="@dimen/height_seat"
+            app:srcCompat="@drawable/ic_chair" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSeat6"
+            style="@style/styleCinemaSeatImageView"
+            android:layout_width="@dimen/width_seat"
+            android:layout_height="@dimen/height_seat"
+            app:srcCompat="@drawable/ic_chair" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSeat7"
+            style="@style/styleCinemaSeatImageView"
+            android:layout_width="@dimen/width_seat"
+            android:layout_height="@dimen/height_seat"
+            app:srcCompat="@drawable/ic_chair" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSeat8"
+            style="@style/styleCinemaSeatImageView"
+            android:layout_width="@dimen/width_seat"
+            android:layout_height="@dimen/height_seat"
+            app:srcCompat="@drawable/ic_chair" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="A"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

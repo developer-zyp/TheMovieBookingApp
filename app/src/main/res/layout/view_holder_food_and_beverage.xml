@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="220dp"
+    android:layout_margin="@dimen/margin_medium"
+    android:background="@drawable/bg_food_and_beverage"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMovieImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvFNBName"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/margin_medium"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/placeholder_food" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFNBName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvFNBPrice"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Potato Chips"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFNBPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnFNBAdd"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="1000KS"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_regular" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFNBAdd"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_card_medium"
+        android:layout_marginEnd="@dimen/margin_card_medium"
+        android:layout_marginBottom="@dimen/margin_card_medium"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/lbl_add"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/llFNBQty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnFNBAdd"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnMinusQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_minus" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFNBQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:text="1"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPlusQty"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_plus" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

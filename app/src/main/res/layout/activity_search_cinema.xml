@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.SearchCinemaActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="@dimen/margin_xlarge"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_arrow_back_white_24"
+                    app:tint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="@dimen/margin_xxlarge"
+                    android:layout_height="@dimen/margin_xxlarge"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/btnBack"
+                    android:background="@null"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtSearchCinema"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/btnFilter"
+                    android:layout_toEndOf="@id/btnSearch"
+                    android:background="@null"
+                    android:hint="@string/lbl_search_the_cinema"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:textColorHint="@color/colorSecondaryText" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnFilter"
+                    android:layout_width="@dimen/margin_xlarge"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_filter"
+                    app:tint="@color/colorAccent" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:id="@+id/llFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium_3">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spnFilerFacilities"
+                android:layout_width="@dimen/width_filter_spinner"
+                android:layout_height="@dimen/height_filter_spinner"
+                android:background="@drawable/bg_search_spinner"
+                android:spinnerMode="dropdown" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spnFilerFormat"
+                android:layout_width="@dimen/width_filter_spinner"
+                android:layout_height="@dimen/height_filter_spinner"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:background="@drawable/bg_search_spinner"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCinemaFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llFilter"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginEnd="@dimen/margin_medium_3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtPriceRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/dm_sans"
+                android:text="@string/lbl_price_range"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtLowestPrince"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtPriceRange"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:fontFamily="@font/dm_sans"
+                android:text="@string/lbl_3500ks"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHighestPrince"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/txtLowestPrince"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/dm_sans"
+                android:text="@string/lbl_29500ks"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/sbPriceRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtLowestPrince"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:progress="60"
+                android:progressBackgroundTint="@color/white"
+                android:progressTint="@color/colorAccent"
+                android:thumbTint="@color/colorAccent"
+                android:visibility="gone" />
+
+            <it.sephiroth.android.library.rangeseekbar.RangeSeekBar
+                android:id="@+id/rsbPriceRange"
+                style="@style/Base.Sephiroth.Widget.RangeSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtLowestPrince"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:max="100"
+                app:range_progress_endValue="60"
+                app:range_progress_startEnd_minDiff="1"
+                app:range_progress_startValue="0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtShowTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rsbPriceRange"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:fontFamily="@font/dm_sans"
+                android:text="@string/lbl_price_range"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtLowestShowTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtShowTime"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:fontFamily="@font/dm_sans"
+                android:text="@string/lbl_8am"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHighestShowTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/txtLowestShowTime"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/dm_sans"
+                android:text="@string/lbl_12pm"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/sbShowTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtLowestShowTime"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:progress="100"
+                android:progressBackgroundTint="@color/white"
+                android:progressTint="@color/colorAccent"
+                android:thumbTint="@color/colorAccent"
+                android:visibility="gone" />
+
+            <it.sephiroth.android.library.rangeseekbar.RangeSeekBar
+                android:id="@+id/rsbShowTime"
+                style="@style/Base.Sephiroth.Widget.RangeSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtLowestShowTime"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:max="100"
+                app:range_progress_endValue="90"
+                app:range_progress_startEnd_minDiff="1"
+                app:range_progress_startValue="0" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchCinemaList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlCinemaFilter"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_large" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

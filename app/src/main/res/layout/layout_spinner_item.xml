@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Custom spinner item layout -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_search_spinner"
+    android:paddingStart="@dimen/margin_medium"
+    android:singleLine="true"
+    android:text="Genres"
+    android:textColor="@color/black"
+    app:drawableRightCompat="@drawable/ic_arrow_down_black_24" />

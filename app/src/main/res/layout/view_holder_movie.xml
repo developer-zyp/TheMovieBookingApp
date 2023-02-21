@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/width_vh_movie"
+    android:layout_height="@dimen/height_vh_movie"
+    android:layout_margin="@dimen/margin_medium"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardCornerRadius="@dimen/margin_medium">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMovieImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_movie_image"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/placeholder_venom" />
+
+        <View
+            android:id="@+id/vGradient"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_movie_image"
+            android:background="@drawable/bg_gradient_movie" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReleasingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/margin_medium"
+            android:background="@drawable/bg_button_green"
+            android:gravity="center"
+            android:padding="@dimen/margin_small"
+            android:text="10th\nAUG"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_smaller" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivImdbLogo"
+            android:layout_width="@dimen/margin_xlarge"
+            android:layout_height="@dimen/margin_medium_2"
+            android:layout_above="@id/tvMovieType"
+            android:layout_alignBottom="@id/tvMovieName"
+            android:layout_toStartOf="@id/tvMovieRating"
+            app:srcCompat="@drawable/logo_imdb" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMovieName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tvMovieType"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginBottom="@dimen/margin_card_medium_2"
+            android:layout_toStartOf="@id/ivImdbLogo"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Venom II"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMovieRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tvMovieType"
+            android:layout_alignBottom="@id/tvMovieName"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:shadowColor="#00000000"
+            android:shadowDx="2"
+            android:shadowRadius="2"
+            android:text=" 9.0 "
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold|italic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMovieType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvMovieType"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/margin_card_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="@string/lbl_ua"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMovieType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginBottom="@dimen/margin_card_medium_2"
+            android:layout_toEndOf="@id/txtMovieType"
+            android:minLines="2"
+            android:text="2D, 3D, 3D IMAX, DBOX 3D "
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_smaller" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

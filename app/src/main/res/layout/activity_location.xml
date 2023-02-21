@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.LocationActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtPickRegion"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_pick_region"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/dm_sans"
+        android:gravity="center"
+        android:shadowColor="@color/colorAccent"
+        android:shadowDx="20"
+        android:shadowDy="0"
+        android:shadowRadius="60"
+        android:text="@string/lbl_pick_region"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_below="@+id/txtPickRegion"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:layout_toStartOf="@+id/btnSearch"
+        android:background="@drawable/bg_location_search"
+        android:foregroundTint="@color/colorAccent"
+        app:iconifiedByDefault="false"
+        app:queryHint="@string/lbl_search_your_location"
+        app:searchIcon="@drawable/ic_search_small" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnSearch"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_below="@id/txtPickRegion"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:background="@drawable/bg_button_green"
+        android:src="@drawable/ic_navigate" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSearch"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        app:srcCompat="@drawable/ic_cities" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivCities"
+        android:background="@color/colorAccentDark"
+        android:paddingHorizontal="@dimen/margin_medium_2"
+        android:paddingVertical="@dimen/margin_medium"
+        android:text="@string/lbl_cities"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <ListView
+        android:id="@+id/lvCities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCities"
+        android:divider="@color/colorAccentDark"
+        android:dividerHeight="1dp" />
+
+</RelativeLayout>

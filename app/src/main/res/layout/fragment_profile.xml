@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".fragments.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_profile_layout"
+        android:background="@drawable/place_holder_profile">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="@dimen/width_profile_img"
+            android:layout_height="@dimen/width_profile_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_large"
+            app:srcCompat="@drawable/ic_profile_green" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/height_profile_layout"
+            android:layout_height="@dimen/height_profile_login_or_signup"
+            android:layout_below="@+id/ivProfileImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:background="@drawable/bg_movie_showtime"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/lbl_login_or_sign_up"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/margin_medium_3"
+            android:paddingEnd="@dimen/margin_medium_3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnProfilePurchaseHistory"
+                style="@style/styleProfileButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_profile_purchase_history"
+                android:text="@string/lbl_purchase_history" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/colorAccentDark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnProfileOffer"
+                style="@style/styleProfileButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_discount"
+                android:text="@string/lbl_offer" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/colorAccentDark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnProfileGiftCard"
+                style="@style/styleProfileButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_giftcard"
+                android:text="@string/lbl_purchase_history" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/colorAccentDark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnProfileLocation"
+                style="@style/styleProfileButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_location"
+                android:text="@string/lbl_location" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/colorAccentDark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnProfilePayment"
+                style="@style/styleProfileButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_payment"
+                android:text="@string/lbl_payment" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/colorAccentDark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnProfileHelp"
+                style="@style/styleProfileButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_help"
+                android:text="@string/lbl_help_and_support" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/colorAccentDark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnProfileLogout"
+                style="@style/styleProfileButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_logout"
+                android:text="@string/lbl_logout" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

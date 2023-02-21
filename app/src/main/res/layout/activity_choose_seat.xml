@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.ChooseSeatActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCinemaScreen"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/ic_screen" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivCinemaScreen"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/dm_sans"
+            android:letterSpacing="0.2"
+            android:padding="@dimen/margin_large"
+            android:shadowColor="@color/white"
+            android:shadowDx="10"
+            android:shadowDy="0"
+            android:shadowRadius="50"
+            android:text="@string/lbl_screen"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_3x" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCinemaSeating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlSeatingSummary"
+            android:layout_below="@id/txtScreen" />
+
+        <RelativeLayout
+            android:id="@+id/rlSeatingSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/llSeatStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_movie_type"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/margin_medium">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/lbl_available"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/lbl_taken"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/lbl_your_selection"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_2x" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_zoom_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/sbSeatZoom"
+                android:layout_marginStart="@dimen/margin_xxlarge"
+                android:layout_marginTop="@dimen/margin_card_medium_n"
+                android:text="+"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/text_regular_3x" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/sbSeatZoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llSeatStatus"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_toStartOf="@id/txt_zoom_out"
+                android:layout_toEndOf="@id/txt_zoom_in"
+                android:progressBackgroundTint="@color/white"
+                android:thumbTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_zoom_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/sbSeatZoom"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin_medium_n"
+                android:layout_marginEnd="@dimen/margin_xxlarge"
+                android:text="-"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/text_heading_1x" />
+
+            <RelativeLayout
+                android:id="@+id/rlBuyTicket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sbSeatZoom"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginBottom="@dimen/margin_medium_3"
+                android:paddingStart="@dimen/margin_large"
+                android:paddingEnd="@dimen/margin_large">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTicketCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/dm_sans"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="2 Tickets"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTicketCount"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="17000KS"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnBooking"
+                    android:layout_width="@dimen/width_booking"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_button_booking"
+                    android:text="@string/lbl_buy_ticket"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

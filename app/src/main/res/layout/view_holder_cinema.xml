@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:paddingTop="@dimen/margin_card_medium_2">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCinemaName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_toStartOf="@id/tvCinemaDetails"
+        android:ellipsize="end"
+        android:fontFamily="@font/dm_sans"
+        android:maxLines="1"
+        android:text="JCGV : Junction City"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCinemaDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:fontFamily="@font/dm_sans"
+        android:maxLines="1"
+        android:text="@string/lbl_see_details"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/llCinemaType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCinemaName"
+        android:layout_marginHorizontal="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivParking"
+            android:layout_width="@dimen/margin_medium_2"
+            android:layout_height="@dimen/margin_medium_2"
+            app:srcCompat="@drawable/ic_parking"
+            app:tint="@color/color_cinema_type" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtParking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:maxLines="1"
+            android:text="@string/lbl_parking"
+            android:textColor="@color/color_cinema_type" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivOnlineFood"
+            android:layout_width="@dimen/margin_medium_2"
+            android:layout_height="@dimen/margin_medium_2"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            app:srcCompat="@drawable/ic_fast_food"
+            app:tint="@color/color_cinema_type" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtOnlineFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:maxLines="1"
+            android:text="@string/lbl_online_food"
+            android:textColor="@color/color_cinema_type" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivWheelChair"
+            android:layout_width="@dimen/margin_medium_2"
+            android:layout_height="@dimen/margin_medium_2"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            app:srcCompat="@drawable/ic_wheelchair"
+            app:tint="@color/color_cinema_type" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtWheelChair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:maxLines="1"
+            android:text="@string/lbl_wheel_chair"
+            android:textColor="@color/color_cinema_type" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlShowTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llCinemaType"
+        android:layout_marginHorizontal="@dimen/margin_medium_3"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvShowTimeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivShowTimeInfo"
+            android:layout_width="@dimen/margin_medium_2"
+            android:layout_height="@dimen/margin_medium_2"
+            android:layout_below="@id/rvShowTimeList"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            app:srcCompat="@drawable/ic_information"
+            app:tint="@color/color_cinema_type" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtShowTimeInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivShowTimeInfo"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_toEndOf="@id/ivShowTimeInfo"
+            android:fontFamily="@font/dm_sans"
+            android:maxLines="1"
+            android:text="@string/lbl_show_time_info"
+            android:textColor="@color/color_cinema_type"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rlShowTime"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:background="@color/colorSecondaryText" />
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="styleMovieTypeText">
+        <item name="android:background">@drawable/bg_movie_type</item>
+        <item name="android:paddingStart">@dimen/margin_card_medium_2</item>
+        <item name="android:paddingEnd">@dimen/margin_card_medium_2</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:textSize">@dimen/text_regular_2x</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="styleShowTimeVHText">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:fontFamily">@font/dm_sans</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="styleCinemaSeatImageView">
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+        <item name="android:layout_marginEnd">@dimen/margin_small</item>
+        <item name="tint">@color/white</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="stylePaymentButton">
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+        <item name="android:background">@drawable/bg_button_payment</item>
+        <item name="android:drawablePadding">@dimen/margin_medium</item>
+        <item name="android:drawableTint">@color/white</item>
+        <item name="android:fontFamily">@font/dm_sans</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/margin_medium</item>
+        <item name="android:paddingEnd">@dimen/margin_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="styleProfileButton">
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+        <item name="android:drawablePadding">@dimen/margin_medium</item>
+        <item name="android:drawableTint">@color/white</item>
+        <item name="android:fontFamily">@font/dm_sans</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/margin_medium</item>
+        <item name="android:paddingEnd">@dimen/margin_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_right_black_24</item>
+    </style>
+
+
+</resources>

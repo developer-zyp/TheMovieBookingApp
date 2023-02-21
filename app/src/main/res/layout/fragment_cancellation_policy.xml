@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_cancellation_policy"
+    android:padding="@dimen/margin_large"
+    tools:context=".fragments.CancellationPolicyFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/dm_sans"
+        android:text="@string/lbl_ticket_cancellation_policy"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFoodNBev"
+        android:layout_width="@dimen/width_food_and_bev"
+        android:layout_height="@dimen/width_food_and_bev"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        app:srcCompat="@drawable/ic_fast_food"
+        app:tint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPolicy1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivFoodNBev"
+        android:layout_alignBottom="@+id/ivFoodNBev"
+        android:layout_marginStart="@dimen/margin_card_medium_2"
+        android:layout_toEndOf="@id/ivFoodNBev"
+        android:gravity="center"
+        android:text="@string/lbl_refund_policy_1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTicket"
+        android:layout_width="@dimen/width_food_and_bev"
+        android:layout_height="@dimen/width_food_and_bev"
+        android:layout_below="@id/ivFoodNBev"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        app:srcCompat="@drawable/ic_menu_ticket"
+        app:tint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPolicy2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivTicket"
+        android:layout_alignBottom="@+id/ivTicket"
+        android:layout_marginStart="@dimen/margin_card_medium_2"
+        android:layout_toEndOf="@id/ivTicket"
+        android:gravity="center"
+        android:text="@string/lbl_refund_policy_2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPolicy3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPolicy2"
+        android:layout_marginStart="@dimen/margin_card_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_toEndOf="@id/ivTicket"
+        android:text="@string/lbl_refund_policy_3"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="@dimen/text_regular" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPolicy4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPolicy3"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:text="@string/lbl_policy_4"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPolicy5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPolicy4"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="@string/lbl_policy_5"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPolicyClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPolicy5"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:background="@drawable/bg_button_green"
+        android:text="@string/lbl_close"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+</RelativeLayout>

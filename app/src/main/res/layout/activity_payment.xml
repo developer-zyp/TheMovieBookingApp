@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.PaymentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="@string/lbl_payment"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_medium_2">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                app:boxStrokeColor="@color/colorAccent"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/colorAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lbl_enter_your_name"
+                    android:maxLines="1"
+                    android:textColorHint="@color/colorSecondaryText"
+                    android:textCursorDrawable="@null">
+
+                    <requestFocus />
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLoginWithGoogle"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/bg_button_green"
+                android:fontFamily="@font/dm_sans"
+                android:text="@string/lbl_unlock_promo_code"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/ic_discount"
+                app:iconGravity="textStart"
+                app:iconPadding="@dimen/margin_medium"
+                app:iconTint="@null" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvChoosePayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:layout_marginBottom="@dimen/margin_medium_3"
+                android:fontFamily="@font/dm_sans"
+                android:text="@string/lbl_choose_your_payment_type"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPaymentUPI"
+                style="@style/stylePaymentButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_payment_upi"
+                android:drawableEnd="@drawable/ic_arrow_right_black_24"
+                android:text="@string/lbl_payment_upi" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPaymentGiftVoucher"
+                style="@style/stylePaymentButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_payment_gift_voucher"
+                android:drawableEnd="@drawable/ic_arrow_right_black_24"
+                android:text="@string/lbl_payment_gift_voucher" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPaymentQuickPay"
+                style="@style/stylePaymentButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_payment_quick_pay"
+                android:drawableEnd="@drawable/ic_arrow_right_black_24"
+                android:text="@string/lbl_payment_quick_pay" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPaymentCard"
+                style="@style/stylePaymentButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_payment_card"
+                android:drawableEnd="@drawable/ic_arrow_right_black_24"
+                android:text="@string/lbl_payment_credit_card_debit_card" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPaymentRedeemPoint"
+                style="@style/stylePaymentButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_payment_redeem_point"
+                android:drawableEnd="@drawable/ic_arrow_right_black_24"
+                android:text="@string/lbl_payment_redeem_point" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPaymentMobileWallet"
+                style="@style/stylePaymentButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_payment_mobile_wallet"
+                android:drawableEnd="@drawable/ic_arrow_right_black_24"
+                android:text="@string/lbl_payment_mobile_wallet" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPaymentNetBanking"
+                style="@style/stylePaymentButton"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_payment_net_banking"
+                android:drawableEnd="@drawable/ic_arrow_right_black_24"
+                android:text="@string/lbl_payment_net_banking" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

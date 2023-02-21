@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/margin_medium"
+    android:paddingBottom="@dimen/margin_medium"
+    android:weightSum="3">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFNBCheckoutCancel"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/width_food_and_bev"
+        app:srcCompat="@drawable/ic_cart_cancel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFNBItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_weight="2"
+        android:fontFamily="@font/dm_sans"
+        android:text="Potato Chips (Qt. 1)"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_regular" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFNBItemAMount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/dm_sans"
+        android:gravity="end"
+        android:text="1000Ks"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_regular" />
+
+
+</LinearLayout>
